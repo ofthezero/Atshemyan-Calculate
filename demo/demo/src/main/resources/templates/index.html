@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="${name} " />
+<a href="/calc">Нажми</a><br>
+<a href="/res">Нажми для результата</a><br>
+<a href="/res/?variable=2">Нажми для результата cо значением</a>
+
+<br>
+
+<form method="post" action="/res">
+  <select id="sel" name="sel">
+    <option value="1">+</option>
+    <option value="2">-</option>
+    <option value="3">*</option>
+    <option value="4">/</option>
+  </select>
+  <br>
+  <input id="var" name="var" type="number" ><br>
+  <input id="var2" name="var2" type="number"><br>
+  <input value="Отправить запрос через Post" type="submit"><br>
+</form>
+
+<br>
+
+<form method="get" action="/getr">
+  <select id="sel1" name="sel1">
+    <option value="1">+</option>
+    <option value="2">-</option>
+    <option value="3">*</option>
+    <option value="4">/</option>
+  </select>
+  <br>
+  <input id="var3" name="var3" type="number" ><br>
+  <input id="var4" name="var4" type="number" ><br>
+  <input value="Отправить запрос через Get" type="submit"><br>
+</form>
+
+
+</body>
+</html>
